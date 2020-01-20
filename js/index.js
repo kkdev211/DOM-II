@@ -25,18 +25,18 @@ const navColor = document.querySelectorAll('.nav-link')
 
 const navTitle = (event) => {
     // console.log ('element', event.target)
-    event.target.style.color = 'blue'
+    event.target.style.color = 'purple'
 }
 navColor.forEach(title => {
     title.addEventListener('click', navTitle)
 });
 
 //change color of h2 on click
-const h2Color = document.querySelectorAll('.containter home .text-content h2')
+const h2Color = document.querySelectorAll('.home .content-section .text-content h2')
 
 const h2Change = (event) => {
     // console.log ('element', event.target)
-    event.target.style.color = 'hot pink'
+    event.target.style.color = 'hotpink'
 }
 h2Color.forEach(title => {
     title.addEventListener('click', h2Change)
@@ -45,28 +45,30 @@ h2Color.forEach(title => {
 //change color of p on click
 
 //change background of div
+//nest 2 similar events & prevent propagation
 const body = document.querySelector('body');
-body.addEventListener('dblclick', (event) => {
+body.addEventListener('click', (event) => {
     event.target.style.backgroundColor = '#40e0d0';
 })
 
-// const containerHome = document.querySelector('.container home');
-// containerHome.addEventListener('dblclick', (event) => {
-//     event.target.style.backgroundColor = 'yellow';
-//     event.stopPropagation();
-// })
+const containerHome = document.querySelector('.container .intro');
+containerHome.addEventListener('click', (event) => {
+    event.target.style.backgroundColor = 'yellow';
+    event.stopPropagation();
+})
 
-// const intro = document.querySelector('.intro');
-// intro.addEventListener('dblclick', (event) {
-//     event.stopPropagation()
-//     intro.style.backgroundColor = "pink";
-// })
+const letsGo = document.querySelector('.container .content-section');
+letsGo.addEventListener('click', (event) => {
+    event.target.style.backgroundColor = '#AFEEEE';
+    event.stopPropagation();
+})
 
-//nest 2 similar events & prevent propagation
 
 //stop nav from refreshing
 
-
+const stopRefresh =document.getElementById("nav").addEventListener("click", function(event){
+    event.preventDefault()
+  });
 
 
 
