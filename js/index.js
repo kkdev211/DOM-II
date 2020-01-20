@@ -1,6 +1,6 @@
 // Your code goes here
 
-//easter egg- change title on dbl click
+// 1 easter egg- change title on dbl click
 const changeTitle =
 document.querySelector ('.logo-heading');
 
@@ -8,7 +8,7 @@ changeTitle.addEventListener('dblclick', () => {
     changeTitle.textContent = "Let's Go For a Ride!"
 });
 
-//make content destination img larger & small on mouse leave/enter
+//2 make content destination img larger & small on mouse leave/enter
 const newDestinationImg = document.querySelector('.content-destination img');
 newDestinationImg.addEventListener('mouseenter', () => {
     newDestinationImg.style.transform = "scale(1.5)";
@@ -20,7 +20,7 @@ newDestinationImg.addEventListener('mouseleave', () => {
 });
 
 
-//change nav color when click
+//3 change nav color when click
 const navColor = document.querySelectorAll('.nav-link')
 
 const navTitle = (event) => {
@@ -31,7 +31,7 @@ navColor.forEach(title => {
     title.addEventListener('click', navTitle)
 });
 
-//change color of h2 on click
+//4 change color of h2 on click
 const h2Color = document.querySelectorAll('.home .content-section .text-content h2')
 
 const h2Change = (event) => {
@@ -42,9 +42,9 @@ h2Color.forEach(title => {
     title.addEventListener('click', h2Change)
 });
 
-//change color of p on click
 
-//change background of div
+
+// 5 change background of div
 //nest 2 similar events & prevent propagation
 const body = document.querySelector('body');
 body.addEventListener('click', (event) => {
@@ -62,6 +62,20 @@ letsGo.addEventListener('click', (event) => {
     event.target.style.backgroundColor = '#AFEEEE';
     event.stopPropagation();
 })
+
+//6 focus
+
+// 7 select
+
+//8 keydown
+
+//9 resize
+
+//10 change image
+const changeImage = document.querySelector('.container .intro img');
+changeImage.addEventListener('dblclick', () => {
+    changeImage.src = https://www.pexels.com/photo/blurred-background-bus-combi-miniature-385998/
+});
 
 
 //stop nav from refreshing
