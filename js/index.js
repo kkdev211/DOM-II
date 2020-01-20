@@ -68,13 +68,13 @@ letsGo.addEventListener('click', (event) => {
 // 7 select
 
 //8 keydown
-
+object.addEventListener("keydown", myScript);
 //9 resize
 
 //10 change image
 const changeImage = document.querySelector('.container .intro img');
 changeImage.addEventListener('dblclick', () => {
-    changeImage.src = https://www.pexels.com/photo/blurred-background-bus-combi-miniature-385998/
+    changeImage.src = 'https://images.pexels.com/photos/385998/pexels-photo-385998.jpeg'
 });
 
 
@@ -84,6 +84,7 @@ const stopRefresh =document.getElementById("nav").addEventListener("click", func
     event.preventDefault()
   });
 
+  //animation
 
 
 
