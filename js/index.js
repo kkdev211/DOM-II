@@ -43,8 +43,7 @@ h2Color.forEach(title => {
 });
 
 
-
-// 5 change background of div
+// 5/6change background of div
 //nest 2 similar events & prevent propagation
 const body = document.querySelector('body');
 body.addEventListener('click', (event) => {
@@ -63,32 +62,33 @@ letsGo.addEventListener('click', (event) => {
     event.stopPropagation();
 })
 
-//6 change button color on click
+//7 change button font color on click
+const button = document.querySelectorAll('.home .content-pick .destination .btn');
 
+const changeButton = (event) => {
+    // alert('ding');
+    event.target.style.color = '#8A2BE2'
+}
 
-// 7 select
+button.forEach(title => {
+    title.addEventListener('click', changeButton)
+});
 
-
-
-//8 keydown
-
-//9 
-
-//10 change image
+//8 change image
 const changeImage = document.querySelector('.container .intro img');
 changeImage.addEventListener('dblclick', () => {
     changeImage.src = 'https://images.pexels.com/photos/385998/pexels-photo-385998.jpeg'
 });
 
 
-//stop nav from refreshing
 
+//9 stop nav from refreshing
 
 const stopRefresh =document.querySelector('.nav').addEventListener('click', function(event) {
     event.preventDefault();
   });
 
-  //animation
+  //10 animation
 
   var item = document.querySelector('.img-content');
   item.addEventListener('click', () => {   
