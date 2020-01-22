@@ -74,20 +74,25 @@ button.forEach(title => {
     title.addEventListener('click', changeButton)
 });
 
-//8 change image
+//8/9 change image
 const changeImage = document.querySelector('.container .intro img');
 changeImage.addEventListener('dblclick', () => {
     changeImage.src = 'https://images.pexels.com/photos/385998/pexels-photo-385998.jpeg'
 });
 
+const changeImage2 = document.querySelector('.container .inverse-content img');
+changeImage2.addEventListener('dblclick', () => {
+    changeImage2.src = 'https://images.pexels.com/photos/697662/pexels-photo-697662.jpeg?cs=srgb&dl=beige-analog-gauge-697662.jpg&fm=jpg'
+});
 
-
-//9 stop nav from refreshing
+//10 stop nav from refreshing
 
 const stopRefresh =document.querySelector('.nav').addEventListener('click', function(event) {
     event.preventDefault();
   });
 
+
+  
   //10 animation
 
   var item = document.querySelector('.img-content');
