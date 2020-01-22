@@ -2,7 +2,7 @@
 
 // 1 easter egg- change title on dbl click
 const changeTitle =
-document.querySelector ('.logo-heading');
+document.querySelector('.logo-heading');
 
 changeTitle.addEventListener('dblclick', () => {
     changeTitle.textContent = "Let's Go For a Ride!"
@@ -63,13 +63,16 @@ letsGo.addEventListener('click', (event) => {
     event.stopPropagation();
 })
 
-//6 focus
+//6 change button color on click
+
 
 // 7 select
 
+
+
 //8 keydown
-object.addEventListener("keydown", myScript);
-//9 resize
+
+//9 
 
 //10 change image
 const changeImage = document.querySelector('.container .intro img');
@@ -80,11 +83,24 @@ changeImage.addEventListener('dblclick', () => {
 
 //stop nav from refreshing
 
-const stopRefresh =document.getElementById("nav").addEventListener("click", function(event){
-    event.preventDefault()
+
+const stopRefresh =document.querySelector('.nav').addEventListener('click', function(event) {
+    event.preventDefault();
   });
 
   //animation
+
+  var item = document.querySelector('.img-content');
+  item.addEventListener('click', () => {   
+    item.animate([
+        { transform: 'translateY(0px)' }, 
+        { transform: 'translateY(-100px)' }
+      ], { 
+        // timing options
+        duration: 1000,
+        iterations: 2
+      });  
+  });
 
 
 
